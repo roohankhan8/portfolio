@@ -21,7 +21,7 @@ const Hero = () => {
   }, [fullText, typingSpeed]);
 
   return (
-    <div className=" py-20 border">
+    <div id="home" className="py-20 border">
       <div
         id="home"
         className="flex flex-col justify-center items-center font-extrabold text-3xl"

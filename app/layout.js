@@ -1,7 +1,13 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components";
-import colors from "../styles/colors";
+import { Navbar, Background } from "@/components";
+// import colors from "../styles/colors";
+// import { Canvas } from "@react-three/fiber";
+// import css from "../styles/Home.module.css";
+// import Box from "../components/Box";
+// import LightBulb from "../components/LightBulb";
+// import OrbitControls from "../components/OrbitControls";
+// import Floor from "../components/Floor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +20,24 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} bg-background text-text h-screen`}>
+        {/* <Background/> */}
+        {/* <div className={css.scene}>
+        <Canvas
+        shadows
+        className={css.canvas}
+        camera={{
+          position: [-6, 7, 7],
+        }}
+      >
+          <ambientLight color={"white"} intensity={0.2} />
+          <LightBulb position={[0, 3, 0]} />
+          <Box rotateX={3} rotateY={0.2} />
+          <OrbitControls />
+          <Floor position={[0, -1, 0]} />
+      </Canvas> */}
         <Navbar />
         {children}
+        {/* </div> */}
       </body>
     </html>
   );

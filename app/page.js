@@ -1,31 +1,16 @@
-'use client'
+
 import Image from "next/image";
-import { Hero, Footer } from "@/components";
-import { useEffect } from "react";
+import { Hero, About, Contact, Skills, Footer, Background } from "@/components";
 
 export default function Home() {
-  useEffect(() => {
-    const smoothScroll = (id) => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-        });
-      }
-    };
-
-    document.querySelectorAll("nav a").forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        const targetId = e.currentTarget.getAttribute("href").substring(1);
-        smoothScroll(targetId);
-      });
-    });
-  }, []);
+  
   return (
     <main>
       <Hero />
-      <Footer/>
+      <About />
+      <Skills />
+      <Contact />
+      <Footer />
     </main>
   );
 }
